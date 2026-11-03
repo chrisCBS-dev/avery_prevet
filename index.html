@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Avery LaSala | A Life with Animals</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gilda+Display&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--rose:#C4958B;--blush:#F5E1DF;--mauve:#A87F78;--ink:#3A2E2D;--paper:#FFFBFA;--soft:#6F5C5A;
+--serif:"Gilda Display",Georgia,"Times New Roman",serif;--sans:"Open Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--blush:#3A2A29;--paper:#201918;--ink:#F6E9E7;--soft:#CDB6B2;--mauve:#C4958B;color-scheme:dark}}
+:root[data-theme="dark"]{--blush:#3A2A29;--paper:#201918;--ink:#F6E9E7;--soft:#CDB6B2;--mauve:#C4958B;color-scheme:dark}
+html{background:var(--blush);scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16.5px/1.65 var(--sans);-webkit-text-size-adjust:100%}
+.hero{background:var(--blush);text-align:center;padding:36px 22px 44px}
+.arch{width:min(70vw,290px);aspect-ratio:4/5;margin:0 auto 26px;border-radius:999px 999px 14px 14px;border:7px solid var(--paper);background:var(--rose);overflow:hidden;box-shadow:0 0 0 2px var(--rose)}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:50% 35%;display:block}
+h1{font:400 clamp(40px,12vw,60px)/1.05 var(--serif);margin:0 0 6px;letter-spacing:.01em}
+.role{margin:0 0 14px;font-weight:600;color:var(--mauve);font-size:15.5px;letter-spacing:.02em}
+.tag{margin:0 auto;max-width:30ch;color:var(--soft);font-size:17px}
+main{max-width:640px;margin:0 auto;padding:34px 20px 20px 18px}
+.tl{position:relative;padding-left:34px}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:0;width:2px;background:var(--rose)}
+.sec{position:relative;margin-bottom:54px}
+.sec::before{content:"";position:absolute;left:-34px;top:8px;width:16px;height:16px;border-radius:50%;background:var(--mauve);border:3px solid var(--paper);box-shadow:0 0 0 2px var(--mauve)}
+.when{margin:0 0 4px;color:var(--mauve);font-weight:600;font-size:14.5px}
+h2{font:400 clamp(27px,7.4vw,36px)/1.15 var(--serif);margin:0 0 14px}
+.intro{margin:0 0 22px}
+.grp{position:relative;margin:0 0 34px}
+.grp.titled::before{content:"";position:absolute;left:-30px;top:9px;width:9px;height:9px;border-radius:50%;background:var(--paper);border:2px solid var(--mauve)}
+h3{font:400 22px/1.25 var(--serif);margin:0 0 8px}
+.cap{margin:0 0 16px;color:var(--soft)}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.g>*{margin:0;border-radius:10px;overflow:hidden;background:var(--blush)}
+.g>:first-child{grid-column:1/-1}
+.g img,.g video{display:block;width:100%;height:100%;object-fit:cover;aspect-ratio:4/5;cursor:zoom-in}
+.g>:first-child img{aspect-ratio:4/4.6}
+.g video{cursor:auto;aspect-ratio:9/16;max-height:78svh;background:#000;object-fit:contain}
+.g .vid{grid-column:1/-1}
+footer{background:var(--blush);text-align:center;padding:34px 22px 40px}
+footer p{margin:0 0 6px;color:var(--soft)}
+footer a{color:var(--ink);font-weight:600;text-underline-offset:3px;text-decoration-color:var(--rose)}
+a:focus-visible,button:focus-visible,img:focus-visible{outline:3px solid var(--mauve);outline-offset:3px}
+dialog{border:0;padding:0;background:transparent;max-width:100vw;max-height:100svh;width:100%;height:100%}
+dialog::backdrop{background:rgba(20,12,12,.88)}
+dialog .box{width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:max(14px,env(safe-area-inset-top)) 12px max(14px,env(safe-area-inset-bottom))}
+dialog img{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px}
+dialog button{position:absolute;top:max(12px,env(safe-area-inset-top));right:12px;background:var(--paper);color:var(--ink);border:0;border-radius:99px;font:600 15px var(--sans);padding:10px 18px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="arch"><img id="hero" alt=""></div>
+  <h1 id="name"></h1>
+  <p class="role" id="role"></p>
+  <p class="tag" id="tag"></p>
+</header>
+<main><div class="tl" id="tl"></div></main>
+<footer><p>Interested in working together?</p><p><a id="mail" href="#"></a></p></footer>
+<dialog id="lb"><div class="box"><img alt=""></div><button type="button" aria-label="Close photo">Close</button></dialog>
+
+
+<script src="content.js"></script>
+<script>
+(function(){
+var A=(typeof ASSETS!=="undefined")?ASSETS:{};
+var stem=function(f){return f.toLowerCase().replace(/\.[a-z0-9]+$/,"")};
+var src=function(f){return A[stem(f)]||("images/"+f)};
+var esc=function(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})};
+var $=function(id){return document.getElementById(id)};
+$("name").textContent=SITE.name;$("role").textContent=SITE.title;$("tag").textContent=SITE.tagline;
+var h=$("hero");h.src=src(SITE.hero);h.alt="Avery with the fox she rehabilitated";
+var m=$("mail");m.textContent=SITE.email;m.href="mailto:"+SITE.email;
+var out="";
+SITE.sections.forEach(function(s){
+  out+='<section class="sec" id="'+esc(s.id||"")+'"><p class="when">'+esc(s.when||"")+'</p><h2>'+esc(s.title)+'</h2><p class="intro">'+esc(s.intro||"")+'</p>';
+  (s.groups||[]).forEach(function(g){
+    out+='<div class="grp'+(g.title?' titled':'')+'">';
+    if(g.title)out+='<h3>'+esc(g.title)+'</h3>';
+    if(g.caption)out+='<p class="cap">'+esc(g.caption)+'</p>';
+    out+='<div class="g">';
+    if(g.video)out+='<figure class="vid"><video controls playsinline preload="metadata" poster="'+src(stem(g.video)+"_poster.jpg")+'" src="'+src(g.video)+'"></video></figure>';
+    (g.images||[]).forEach(function(f,i){
+      out+='<figure><img loading="lazy" tabindex="0" src="'+src(f)+'" alt="'+esc((g.title||s.title)+", photo "+(i+1))+'" onerror="this.parentNode.remove()"></figure>';
+    });
+    out+='</div></div>';
+  });
+  out+='</section>';
+});
+$("tl").innerHTML=out;
+var lb=$("lb"),li=lb.querySelector("img");
+function open(e){var t=e.target;if(t.tagName==="IMG"&&t.closest(".g")){li.src=t.src;li.alt=t.alt;lb.showModal()}}
+document.addEventListener("click",open);
+document.addEventListener("keydown",function(e){if(e.key==="Enter")open(e)});
+lb.addEventListener("click",function(){lb.close()});
+})();
+</script>
+</body>
+</html>
