@@ -39,7 +39,7 @@ const SITE = {
       title: "Volunteering at Virginia Tech",
       intro: "My experience working with Call of the Wild CT was so foundational that I immediately sought out opportunities to work with animals in any capacity in my freshman year at Virginia Tech. I volunteer at Pulaski County Animal Control and Shelter multiple times a week, and am sometimes able to assist in the medical care of the animals there with the head veterinarian.",
       groups: [
-        { images: ["vtvolunteer_1.jpg","vtvolunteer_2.jpg","vtvolunteer_3.jpg","vtvolunteer_4.jpg","vtvolunteer_5.jpg","vtvolunteer_6.jpg","vtvolunteer_7.jpg","vtvolunteer_8.jpg","vtvolunteer_9.jpg"] }
+        { images: ["vtvolunteer_1.jpg","vtvolunteer_2.jpg","vtvolunteer_4.jpg","vtvolunteer_5.jpg","vtvolunteer_6.jpg","vtvolunteer_8.jpg"] }
       ]
     },
     {
