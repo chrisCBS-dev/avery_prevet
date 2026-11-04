@@ -18,17 +18,17 @@ const SITE = {
       id: "rehab",
       when: "Spring and summer 2026",
       title: "Wildlife Rehabilitation Intern",
-      intro: "The week after my 18th birthday, I sat for, and passed, the Connecticut State Wildlife Rehabilitator exam and earned my license. It led to a set of experiences that solidified my ambition to work in the animal sciences. I spent the spring and summer under the supervision of Call of the Wild CT, where I rehabilitated an abandoned juvenile fox and 3 infant raccoons.",
+      intro: "The week after my eighteenth birthday I passed the Connecticut State Wildlife Rehabilitator exam and earned my license. This led to a set of experiences that solidified my ambition to work in wildlife medicine. I spent the spring and summer under the supervision of Call of the Wild CT, where I rehabilitated various mammals, including infant and juvenile raccoons, red foxes, and groundhogs.",
       groups: [
         {
           title: "Rehabilitation of Red Fox (Rudy)",
-          caption: "I spent 3 months managing medical treatment, feeding and sheltering an infant fox abandoned by his family, under the supervision of Call of the Wild CT. I was amazed by how attached the fox became to me. We developed a connection I was not expecting.",
+          caption: "When we first got the call for Rudy, he had mange and was extremely hypothermic. Rudy was found alone - and considering his medical needs, we took a more hands-on approach with his rehabilitation. I formed a deep bond with Rudy and headed the management of his care, which made it all the more rewarding to watch his natural instincts come out and be a part of his successful release.",
           video: "fox_video.mp4",
           images: ["fox_1.jpg", "fox_2.jpg", "fox_3.jpg", "fox_4.jpg"]
         },
         {
           title: "Rehabilitation of Newborn Raccoons",
-          caption: "While I was caring for Rudy, I also nursed 3 infant raccoons, starting with bottle feeding. By the time I left for college, they were eating solid foods and able to run freely in the yard.",
+          caption: "While caring for Rudy, we were brought three 2-week-old raccoon orphans. They required temporary incubation, bottle feeding, and near constant care. I was allowed by my supervisors to manage their care and weaned them onto solid foods. We were able to get them healthy and eventually released them into the wild.",
           images: ["racoons_1.jpg", "racoons_2.jpg", "racoons_4.jpg"]
         }
       ]
@@ -37,7 +37,7 @@ const SITE = {
       id: "vt",
       when: "Freshman year",
       title: "Volunteering at Virginia Tech",
-      intro: "The CT wildlife rehabilitation experience was so foundational for me that I immediately sought out opportunities to volunteer in my freshman year at Virginia Tech. Several times a week (when I can get a ride), I volunteer at the Pulaski County Humane Center.",
+      intro: "My experience working with Call of the Wild CT was so foundational that I immediately sought out opportunities to work with animals in any capacity in my freshman year at Virginia Tech. I volunteer at Pulaski County Animal Control and Shelter multiple times a week, and am sometimes able to assist in the medical care of the animals there with the head veterinarian.",
       groups: [
         { images: ["vtvolunteer_1.jpg","vtvolunteer_2.jpg","vtvolunteer_3.jpg","vtvolunteer_4.jpg","vtvolunteer_5.jpg","vtvolunteer_6.jpg","vtvolunteer_7.jpg","vtvolunteer_8.jpg","vtvolunteer_9.jpg"] }
       ]
@@ -46,7 +46,7 @@ const SITE = {
       id: "childhood",
       when: "As early as I can remember",
       title: "I have had a love for animals as early as I can remember",
-      intro: "I grew up in suburban Connecticut near a tidal river, and the exposure to wildlife was abundant: blue herons, crabs, deer, coyotes, raccoons, osprey and turtles, to name a few. A bald eagle nests here as well. Truly an amazing bird. I spent many weekends on my kayak on the river.",
+      intro: "I grew up in suburban Connecticut near a tidal river, and the exposure to wildlife was abundant. Whether it was feeding the ducks, watching the blue herons feed from my kayak on the river, or rescuing the baby snapping turtles that got washed out in rain storms, I was constantly tied to the nature around me.",
       groups: [
         { images: ["butterfly_kid.jpg","chickens.jpg","turtle_kid.jpg","horseback_kid.jpg"] }
       ]
