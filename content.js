@@ -9,7 +9,7 @@
 ================================================== */
 const SITE = {
   name: "Avery LaSala",
-  title: "Pre-Veterinary Student, Virginia Tech",
+  title: "Animal Science Student, Virginia Tech",
   tagline: "A lifelong love of animals, and the hands-on experience to match.",
   hero: "fox_3.jpg",
   email: "averylasala@gmail.com",
